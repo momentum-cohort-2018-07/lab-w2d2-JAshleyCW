@@ -1,21 +1,59 @@
 // 1. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
-function sum (numbers) {
-  console.log('numbers', numbers)
-  return 0
+function sum(numbers) {
+  var total = 0;
+  for (var index = 0; index < numbers.length; index++) {
+    total = total + numbers[index]
+  }
+  return total
 }
+
+// loop through array: named a var called total which starts at 0 , created a loop for indexing array values
+// add numbers in array: tell the program that the total var = the "total" (we add to each time we loop) + indexed numbers
+// return the sum: return the total var
 
 // 2. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+
+
+function average(numbers) {
+  var total = sum(numbers)
+  for (var index = 0; index < numbers.length; index++) {
+    var average = total / numbers.length
+  }
+  return average
+}
 
 // 3. Create a function called "intersection" that takes two arrays and
 // returns a new array that contains the elements found in both arrays.
 // The order they are in does not matter, but no duplicates should be
 // in the returned array, even if they were in the input.
 
+function intersection(array1, array2) {
+  var newArray = []
+  for (var index = 0; index < array1.length; index++) {
+    for (var i = 0; i < array2.length; i++) {
+      if (array1[index] === array2[i]) {
+        newArray.push(array1[index])
+      }
+    }
+  } return newArray
+
+  // as long as the 'index' is < the length of the array
+}
+
 // 4. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+function minimum(arrayOfNumbers) {
+  var minimum;
+  for (var i = 0; i < arrayOfNumbers.length; i++) {
+    if (typeof (minimum) === 'undefined' || arrayOfNumbers[i] < minimum) {
+      minimum = arrayOfNumbers[i]
+    }
+  } return minimum
+}
 
 // 5. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -41,9 +79,27 @@ function sum (numbers) {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
+// function selectionSort(arraySort) {
+//   var arraySortCopy = arraySort.slice(0)
+//   var minimum = minimum(arrayOfNumbers) 
+//   var newArray = []
+//     for (var i = 0; index < arraySort.length; i++) {
+
+//   }
+// }
+
+
 // 6. Create a function called "createUser" that takes a name and a Date object
 // and returns an object with the keys "name" and "dob" (date of birth) with
 // those values.
+
+function createUser(name, dob) {
+   var user = {name: "Andre", dob: new Date(1999, 1, 15)}
+
+  
+
+}
+// call function createUser (Ashley, dob) -- return "name" Ashley, "dob" 7/1/80
 
 // 7. Create a function called "calculateAge" that takes a user created from
 // createUser and a Date object considered the current date, and calculates the user's
